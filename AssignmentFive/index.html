@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="input1">
+            <label for="">Input Box 1</label>
+            <input type="number" name="input1" id="input1">
+        </div>
+        <div>
+            <p> + </p>
+        </div>
+        <div class="input2">
+            <label for="">Input Box 2</label>
+            <input type="number" name="input2" id="input2">
+        </div>
+        <div>
+            <p> / </p>
+        </div>
+        <div class="input3">
+            <label for="">Input Box 3</label>
+            <input type="number" name="input3" id="input3">
+        </div>
+        <button id="btn" onclick="handleAdd()" >Add</button>
+        <button id="divide" onclick="handleDivide()">Divide</button>
+        <p id="result1"></p>
+        <p id="result2"></p>
+    </main>
+
+    <script>
+ let inputOne = document.getElementById("input1");
+ let inputTwo = document.getElementById("input2");
+ let inputThree = document.getElementById("input3");
+ let btn = document.getElementById("btn")
+ let result1 = document.getElementById("result1");
+ let result2 = document.getElementById("result2");
+
+ //Function handleAdd
+const handleAdd = () => {
+    result1.innerText = Number(inputOne.value  ) + Number(inputTwo.value);
+};
+const handleDivide = () => {
+  result2.innerText = result1.innerText / Number(inputThree.value)
+}
+// if (result2.innerText >= 1) {
+// return
+// result1.style.display = "none";
+// }
+
+    </script>
+</body>
+</html>
